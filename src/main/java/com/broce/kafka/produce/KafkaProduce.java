@@ -34,10 +34,8 @@ public class KafkaProduce {
     private KafkaTemplate kafkaTemplate;
 
     /**
-     * @Description 发送消息
-     * @Date 2020/10/20 16:57
      * @Param [topic, key, msg]
-     * @Author  hcb
+     * @Author  broce
      * @Return int
      **/
     public int sendMsg(String topic, String key,JSONObject jsonObject){
