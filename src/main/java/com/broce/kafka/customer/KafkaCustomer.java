@@ -3,7 +3,7 @@ package com.broce.kafka.customer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springblade.core.tool.utils.StringUtil;
+import java.util.Objects;
 
 /**
  * @author Blade
@@ -16,7 +16,7 @@ public class KafkaCustomer {
         log.info("kafka—customer");
         try {
             String value = record.value();
-            if (StringUtil.isEmpty(value)) {
+            if (Objects.isNull(value)) {
                 return;
             }
         //Json解析
